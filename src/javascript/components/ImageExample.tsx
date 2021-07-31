@@ -13,7 +13,7 @@ function ImageExample() {
   const flag = useSelector((reducers: RootState) => reducers.showFlagReducer);
   // Redux Actions
   const dispatchR = useDispatch();
-  const changeF = (currentFlag: any) => dispatchR(changeFlag(currentFlag));
+  const changeF = (currentFlag: boolean) => dispatchR(changeFlag(currentFlag));
 
   function handleclick() {
     changeF(flag.showImg);

@@ -1,10 +1,15 @@
 import { INVERT_FLAG } from 'Types';
 
+interface Action {
+  type: string;
+  payload?: unknown;
+}
+
 const INITIAL_STATE = {
-  showImg: true
+  showImg: false
 };
 
-export default (state = INITIAL_STATE, action: any) => {
+export default (state = INITIAL_STATE, action: Action) => {
   switch (action.type) {
     case INVERT_FLAG:
       return {

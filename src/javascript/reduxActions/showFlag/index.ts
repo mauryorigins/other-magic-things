@@ -9,3 +9,5 @@ export const changeFlag = (currentFlag: boolean) => (dispatch: Dispatch<AnyActio
     payload: !currentFlag
   });
 };
+
+export default null

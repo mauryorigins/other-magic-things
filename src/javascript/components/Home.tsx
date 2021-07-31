@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom';
 // ---Others
 import data from 'Others/data.json'
 
-function Home(props: any) {
+interface Props {
+  handleclick: () => any;
+  showList: boolean;
+}
+
+interface Item {
+  name: string;
+  id: string;
+}
+
+function Home(props: Props) {
   const { handleclick, showList } = props;
   const { loaders } = data;
 
@@ -20,7 +30,7 @@ function Home(props: any) {
       <button type="button" onClick={handleclick}>
         Show Loaders
       </button>
-      {showList && loaders.map((item: any, index: any) => <p key={index}>{item.name}</p>)}
+      {showList && loaders.map((item: Item, index: number) => <p key={index}>{item.name}</p>)}
     </>
   );
 }

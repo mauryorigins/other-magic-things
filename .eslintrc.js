@@ -21,6 +21,7 @@ module.exports = {
     process: "readonly",
     module: "writable",
     exports: "writable",
+    unknown: "writable",
     ReturnType: "readonly"
   },
   rules: {
