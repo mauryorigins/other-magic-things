@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 // ---Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFlag } from 'Actions/showFlag';
+import { RootState } from 'Reducers';
 // ---Others
 import frame from 'Images/frame.png';
 
 function ImageExample() {
   // Redux States
-  const flag = useSelector(reducers => reducers.showFlagReducer);
+  const flag = useSelector((reducers: RootState) => reducers.showFlagReducer);
   // Redux Actions
   const dispatchR = useDispatch();
   const changeF = (currentFlag: any) => dispatchR(changeFlag(currentFlag));

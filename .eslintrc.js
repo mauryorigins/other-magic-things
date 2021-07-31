@@ -15,6 +15,14 @@ module.exports = {
     jquery: true,
     jest: true,
   },
+  globals: {
+    require: "readonly",
+    console: "readonly",
+    process: "readonly",
+    module: "writable",
+    exports: "writable",
+    ReturnType: "readonly"
+  },
   rules: {
     'no-debugger': 0,
     'no-alert': 0,

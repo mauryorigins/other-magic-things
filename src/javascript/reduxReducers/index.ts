@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import showFlagReducer from 'Reducers/showFlag';
+import showFlagReducer from '@Reducers/showFlag';
 
-export default combineReducers({
+const rootReducer = combineReducers({
   showFlagReducer
 });
+
+export default  rootReducer
+
+export type RootState = ReturnType<typeof rootReducer>
