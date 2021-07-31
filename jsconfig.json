@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "module": "es2020",
+    "baseUrl": "./src",
+    "module": "ESNext",
     "paths": {
       "Comp/*": ["./src/javascript/components/*"],
       "Cont/*": ["./src/javascript/containers/*"],
