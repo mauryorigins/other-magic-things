@@ -7,6 +7,7 @@
     "build-dll": "webpack --config webpack/webpack.dll.config.js",
     "build-dist": "webpack --config webpack/webpack.config.js --env env=prod",
     "build-full": "webpack --config ./webpack/webpack.dll.config.js && webpack --config webpack/webpack.config.js --env env=prod",
+    "start": "node prodServer.js",
     "prod": "webpack --config ./webpack/webpack.dll.config.js && webpack --config webpack/webpack.config.js --env env=prod && node prodServer.js"
   },
   "keywords": [

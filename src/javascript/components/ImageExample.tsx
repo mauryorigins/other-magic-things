@@ -1,16 +1,17 @@
 // ---Dependencys
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 // ---Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFlag } from 'Actions/showFlag';
-import { RootState } from 'Reducers';
+import { ReduxState } from 'Reducers';
 // ---Others
 import frame from 'Images/frame.png';
 
 function ImageExample() {
   // Redux States
-  const flag = useSelector((reducers: RootState) => reducers.showFlagReducer);
+  const flag = useSelector((reducers: ReduxState) => reducers.showFlagReducer);
   // Redux Actions
   const dispatchR = useDispatch();
   const changeF = (currentFlag: boolean) => dispatchR(changeFlag(currentFlag));
@@ -27,9 +28,11 @@ function ImageExample() {
       <a href="/">
         <h3>To home --- "href"</h3>
       </a>
-      <button type="button" onClick={handleclick}>
+      <Button
+          onClick={handleclick}
+        >
         Mostrar imagen
-      </button>
+      </Button>
       {flag.showImg && <img src={frame} alt="frameo" />}
     </>
   );

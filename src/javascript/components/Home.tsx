@@ -1,6 +1,7 @@
 // ---Dependencys
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 // ---Others
 import data from 'Others/data.json'
 
@@ -27,9 +28,12 @@ function Home(props: Props) {
       <a href="/img">
         <h3>To img --- "href"</h3>
       </a>
-      <button type="button" onClick={handleclick}>
+      <Button
+          type="primary"
+          onClick={handleclick}
+        >
         Show Loaders
-      </button>
+      </Button>
       {showList && loaders.map((item: Item, index: number) => <p key={index}>{item.name}</p>)}
     </>
   );
