@@ -1,19 +1,20 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  parser: 'babel-eslint',
+  extends: [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2020,
-    // Can I remove these now?
-    ecmaFeatures: {
-      impliedStrict: true,
-      classes: true,
-    },
+    project: "./tsconfig.json",
+    tsconfigRootDir: "."
   },
   env: {
     browser: true,
     node: true,
-    jquery: true,
-    jest: true,
+    jest: true
   },
   globals: {
     require: "readonly",
@@ -35,6 +36,8 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ["error", { "functions": false, "classes": true, "variables": true }],
     'no-unused-vars': [
       1,
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
