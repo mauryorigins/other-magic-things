@@ -1,5 +1,5 @@
 // ---Dependencys
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 // ---Redux
@@ -9,7 +9,7 @@ import { ReduxState } from 'Reducers';
 // ---Others
 import frame from 'Images/frame.png';
 
-function ImageExample() {
+function ImageExample(): ReactElement {
   // Redux States
   const flag = useSelector((reducers: ReduxState) => reducers.showFlagReducer);
   // Redux Actions
@@ -28,11 +28,7 @@ function ImageExample() {
       <a href="/">
         <h3>To home --- "href"</h3>
       </a>
-      <Button
-          onClick={handleclick}
-        >
-        Mostrar imagen
-      </Button>
+      <Button onClick={handleclick}>Mostrar imagen</Button>
       {flag.showImg && <img src={frame} alt="frameo" />}
     </>
   );
