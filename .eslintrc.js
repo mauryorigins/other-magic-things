@@ -37,7 +37,6 @@ module.exports = {
       'WithStatement',
     ],
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ["error", { "functions": false, "classes": true, "variables": true }],
     'no-unused-vars': [
       1,
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
@@ -126,6 +125,9 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 0,
+    // Typescript
+    '@typescript-eslint/no-use-before-define': ["error", { "functions": false, "classes": true, "variables": true }],
+    '@typescript-eslint/no-explicit-any': 0
   },
   plugins: ['html', 'prettier', 'react-hooks'],
 };

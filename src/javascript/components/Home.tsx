@@ -1,5 +1,5 @@
 // ---Dependencys
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 // ---Others
@@ -15,11 +15,10 @@ interface Item {
   id: string;
 }
 
-function Home(props: Props) {
+function Home(props: Props) : ReactElement {
   const { handleclick, showList } = props;
   const { loaders } = data;
 
-  console.log('metod: ', handleclick);
   return (
     <>
       <Link to="/img">
@@ -29,9 +28,9 @@ function Home(props: Props) {
         <h3>To img --- "href"</h3>
       </a>
       <Button
-          type="primary"
-          onClick={handleclick}
-        >
+        type="primary"
+        onClick={handleclick}
+      >
         Show Loaders
       </Button>
       {showList && loaders.map((item: Item, index: number) => <p key={index}>{item.name}</p>)}
