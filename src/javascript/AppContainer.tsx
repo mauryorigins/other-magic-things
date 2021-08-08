@@ -6,7 +6,7 @@ import HomePage from 'Pages/HomePage';
 import ImageExPage from 'Pages/ImageExPage';
 import Error404Page from 'Pages/Error404Page';
 
-function AppContainer() {
+function AppContainer() : React.ReactElement {
   return (
     <BrowserRouter>
       <Switch>
