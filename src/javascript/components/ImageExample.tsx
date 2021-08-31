@@ -30,7 +30,9 @@ function ImageExample(): ReactElement {
       <a href="/">
         <h3>To home --- "href"</h3>
       </a>
-      <Button onClick={handleclick}>Mostrar imagen</Button>
+      <div>
+        <Button onClick={handleclick}>Mostrar imagen</Button>
+      </div>
       {flag.showImg && <img src={frame} alt="frameo" />}
     </>
   );

@@ -17,15 +17,23 @@
 // }
 
 body {
-  background-color: rgb(141, 211, 243);
-  font-family: 'Questrial';
   margin: 0px;
   padding: 0px;
+  // Background
+  background-color: @backgroundFallBack1;
+  background: @backgroundImage1 no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // Font
+  font-family: 'Questrial';
+  color: @colorPrimaryText;
 }
 
 
 p{
-  color: @colorDark;
+  color: @colorPrimaryText;
   font-size: 22px;
   text-align: center;
   span{
