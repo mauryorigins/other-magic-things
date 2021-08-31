@@ -2,7 +2,7 @@
 import React from 'react';
 
 // ------------------------------------------ COMPONENT-----------------------------------------
-function Titulo() {
+function Titulo(): React.ReactElement {
   return (
     <>
       <h1>Error 404</h1>

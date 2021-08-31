@@ -5,15 +5,15 @@ import { Helmet } from 'react-helmet';
 import Error404Cont from 'Cont/Error404Cont';
 
 // ------------------------------------------ COMPONENT-----------------------------------------
-const Error404Page = () => {
+function Error404Page(): React.ReactElement {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Error 404</title>
       </Helmet>
       <Error404Cont />
-    </React.Fragment>
+    </>
   );
-};
+}
 
 export default Error404Page;

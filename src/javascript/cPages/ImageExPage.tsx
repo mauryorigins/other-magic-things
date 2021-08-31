@@ -5,15 +5,15 @@ import { Helmet } from 'react-helmet';
 import ImageExCont from 'Cont/ImageExCont';
 
 // ------------------------------------------ COMPONENT-----------------------------------------
-const ImageExPage = () => {
+function ImageExPage (): React.ReactElement {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Ejemplo con imagen</title>
       </Helmet>
       <ImageExCont />
-    </React.Fragment>
+    </>
   );
-};
+}
 
 export default ImageExPage;

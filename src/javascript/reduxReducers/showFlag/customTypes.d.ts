@@ -1,6 +1,6 @@
 export interface Action {
   type: string;
-  payload?: boolean;
+  payload: boolean;
 }
 
 export interface ReducerState {

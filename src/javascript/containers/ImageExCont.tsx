@@ -4,7 +4,7 @@ import React from 'react';
 import ImageExample from 'Comp/ImageExample';
 
 // ------------------------------------------ COMPONENT-----------------------------------------
-function ImageExCont() {
+function ImageExCont(): React.ReactElement {
   return (
     <>
       <ImageExample />

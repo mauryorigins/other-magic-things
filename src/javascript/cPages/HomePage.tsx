@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import HomeCont from 'Cont/HomeCont';
 
 // ------------------------------------------ COMPONENT-----------------------------------------
-const HomePage = () => {
+function HomePage (): React.ReactElement {
   return (
     <>
       <Helmet>
@@ -14,6 +14,6 @@ const HomePage = () => {
       <HomeCont />
     </>
   );
-};
+}
 
 export default HomePage;

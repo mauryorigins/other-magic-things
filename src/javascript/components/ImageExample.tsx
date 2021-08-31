@@ -17,6 +17,8 @@ function ImageExample(): ReactElement {
   const changeF = (currentFlag: boolean) => dispatchR(changeFlag(currentFlag));
 
   function handleclick() {
+    console.log('Entra: ', flag.showImg);
+    
     changeF(flag.showImg);
   }
 

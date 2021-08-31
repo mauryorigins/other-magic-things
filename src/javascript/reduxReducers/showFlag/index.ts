@@ -10,7 +10,7 @@ export default (state = INITIAL_STATE, action: Action): ReducerState => {
     case INVERT_FLAG:
       return {
         ...state,
-        showImg: action.payload || true
+        showImg: action.payload
       };
 
     default:
