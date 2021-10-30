@@ -24,24 +24,24 @@ function JustButtons(props: AuxProps1) {
         </Link>
       </Col>
       <Col xs={24} sm={24} lg={5}>
-        <Link to={`/img?${appConfig.productsURL}`}>
+        <Link to={`/input?${appConfig.productsURL}`}>
           <div
             className={
-              currentPath === '/img' ? 'nav-btn nav-border' : 'nav-btn'
+              currentPath === '/input' ? 'nav-btn nav-border' : 'nav-btn'
             }
           >
-            Img Example
+            Input Example
           </div>
         </Link>
       </Col>
       <Col xs={24} sm={24} lg={5}>
-        <Link to="/rastreo">
+        <Link to="/cards">
           <div
             className={
-              currentPath === '/rastreo' ? 'nav-btn nav-border' : 'nav-btn'
+              currentPath === '/cards' ? 'nav-btn nav-border' : 'nav-btn'
             }
           >
-            Rastreo
+            Cards Example
           </div>
         </Link>
       </Col>
