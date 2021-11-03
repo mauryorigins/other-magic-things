@@ -7,6 +7,7 @@ import ImageExPage from 'Pages/ImageExPage';
 import InputExamplePage from 'Pages/InputExamplePage';
 import CardsExamplePage from 'Pages/CardsExamplePage';
 import Error404Page from 'Pages/Error404Page';
+import ListPage from 'Pages/list';
 // ---Components
 import NavbarCont from 'Cont/NavbarCont';
 
@@ -19,6 +20,7 @@ function AppContainer() : React.ReactElement {
         <Route exact path="/img" component={ImageExPage} />
         <Route exact path="/input" component={InputExamplePage} />
         <Route exact path="/cards" component={CardsExamplePage} />
+        <Route exact path="/list" component={ListPage} />
         <Route exact path="*" component={Error404Page} />
       </Switch>
     </BrowserRouter>

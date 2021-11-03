@@ -45,6 +45,17 @@ function JustButtons(props: AuxProps1) {
           </div>
         </Link>
       </Col>
+      <Col xs={24} sm={24} lg={5}>
+        <Link to="/list">
+          <div
+            className={
+              currentPath === '/list' ? 'nav-btn nav-border' : 'nav-btn'
+            }
+          >
+            List Example
+          </div>
+        </Link>
+      </Col>
     </>
   );
 }
