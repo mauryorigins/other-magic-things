@@ -4,7 +4,7 @@ import {Row, Col} from 'antd';
 // ---Interface
 interface Props {
     uploadName:(event:React.ChangeEvent<HTMLInputElement>)=>void;
-    addInfo:()=>void;
+    addInfo:(ev:React.SyntheticEvent)=>void;
     current:string;
 }
 // ---Components
@@ -13,7 +13,7 @@ const {uploadName, addInfo, current} = props;
     return(
       <Row>
         <Col>
-          <form onSubmit={addInfo}>
+          <form className="form-conteiner" onSubmit={addInfo}>
             <input type="text" onChange={uploadName} value={current} />
             <br />
             <img src="" alt="" />

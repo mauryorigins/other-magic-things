@@ -12,18 +12,18 @@ export interface Card {
 }
 interface Action {
   type:string;
-  payload:unknown;
+  payload:Card;
 }
 const initialState:Array<Card> = [];
 
-function reducer (state:Array<Card>, action:Action) {
+function reducer (state:Array<Card>, action:Action):Array<Card> {
   const {type ,  payload}=action;
   switch(type)
   {
     case 'addCards': 
     return [...state, payload];
     default:
-      return state as Array<Card>;
+      return state;
   }
 }
 // ------------------------------------------ COMPONENT-----------------------------------------
@@ -32,18 +32,13 @@ export default function Form(): ReactElement {
   const [formCard, setFormCard] = useReducer(reducer, initialState);
   const [current, setCurrent] = useState('');
   // ------------ METHODS ----------------------
-  function uploadName(event: React.ChangeEvent<HTMLInputElement>) {
+  function uploadName(event: React.ChangeEvent<HTMLInputElement>){
     setCurrent(event.target.value);
-    // setCurrent('');
    }
-  function addInfo() {
-    console.log('before: ',formCard )
-    console.log('before: ',current )
-    const newArray = {imageRoute: someCard, name:current}
-    console.log(newArray)
-    setFormCard([...formCard,newArray])
-    console.log('after: ',formCard )
-    console.log('after: ',current )
+  function addInfo(ev:React.SyntheticEvent) {
+    const red  = {type:'addCards', payload:{imageRoute:someCard, name:current}} 
+    ev.preventDefault();
+    setFormCard(red)
   }
 
   // ------------ RENDER -----------------------
