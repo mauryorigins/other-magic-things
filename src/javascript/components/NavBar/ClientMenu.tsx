@@ -35,35 +35,13 @@ function JustButtons(props: AuxProps1) {
         </Link>
       </Col>
       <Col xs={24} sm={24} lg={5}>
-        <Link to="/cards">
-          <div
-            className={
-              currentPath === '/cards' ? 'nav-btn nav-border' : 'nav-btn'
-            }
-          >
-            Cards Example
-          </div>
-        </Link>
-      </Col>
-      <Col xs={24} sm={24} lg={5}>
-        <Link to="/list">
-          <div
-            className={
-              currentPath === '/list' ? 'nav-btn nav-border' : 'nav-btn'
-            }
-          >
-            List Example
-          </div>
-        </Link>
-      </Col>
-      <Col xs={24} sm={24} lg={5}>
         <Link to="/listContainer">
           <div
             className={
               currentPath === '/listContainer' ? 'nav-btn nav-border' : 'nav-btn'
             }
           >
-            List Container Example
+            Catalogue Magic Cards
           </div>
         </Link>
       </Col>

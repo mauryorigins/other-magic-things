@@ -3,7 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 // ---Components
 // import ListConteiner from 'Cont/listoncontainers';
-import Form from 'Cont/Form';
+// import Form from 'Cont/Form';
+import FormCont from 'Cont/FormCont';
 
 // ------------------------------------------ COMPONENT-----------------------------------------
 export default function ListConteinerPage (): React.ReactElement {
@@ -12,7 +13,7 @@ export default function ListConteinerPage (): React.ReactElement {
       <Helmet>
         <title>List example</title>
       </Helmet>
-      <Form />
+      <FormCont />
     </>
   );
 }
